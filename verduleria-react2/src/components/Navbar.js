@@ -1,5 +1,6 @@
 import React from 'react';
 import {Navbar, Nav, Container, NavDropdown} from 'react-bootstrap';
+import CartWidget from './CartWidget';
 
 
 
@@ -13,6 +14,7 @@ export default function NavBar () {
       <Nav className="me-auto">
         <Nav.Link href="#home">Nosotros</Nav.Link>
         <Nav.Link href="#catalogo">Catalogo</Nav.Link>
+        <Nav.Link className='carrito' href="#carrito"><CartWidget/></Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Container>
