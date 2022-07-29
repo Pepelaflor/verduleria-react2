@@ -1,31 +1,30 @@
-import React, { useState  }from "react";
+import React, { useState } from "react"
+function ItemCount ({stock}) {
+    const [counter, setContador] = useState(1)
 
-
-
-
-function ItemCount ({stock, initial, onAdd}) {
-    const [num, setNum, ] = useState(0);
-    const incNum = () => {
-       
-         setNum(num + 1);   
-        
-    };
-
-    const decNum = () => {
-        if(num < 0) {
-        setNum(num - 1);
-        }else{
-            setNum(0);
+        const addNumber = () => {
+            if(counter < stock) {
+                setContador(counter + 1);
+            }
         }
-    };
 
-    return (
-        <div className="CounterContainer">
-            <button className="ItemCount" onClick={decNum}>-</button>
-            <h3 className="ItemCount">{num=1}</h3>
-            <button className="ItemCount" onClick={incNum}>+</button>
-        </div>
-    )
-}
+        const delNumber = () => {
+            if(counter > 1) {
+            setContador(counter - 1);
+            }else(alert('error'))
 
-export default ItemCount;
+        }
+        return (
+            <div className="CounterContainer">
+                <div>
+                    <button className="ItemCount" onClick={delNumber}>-</button>
+                    <p className="ItemCount">{counter}</p>
+                    <button className="ItemCount" onClick={addNumber}>+</button>
+                </div>
+            </div>
+        )
+    }
+
+    export default ItemCount;
+
+    

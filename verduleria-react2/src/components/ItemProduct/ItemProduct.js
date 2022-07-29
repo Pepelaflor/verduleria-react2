@@ -1,29 +1,15 @@
 import { propTypes } from "react-bootstrap/esm/Image";
 import ItemCount from "../ItemCount";
 import { useState } from "react";
-const ItemProduct = ({title, price, stock, imagen}) => {
-    const [counter, setContador] = useState(1)
-    const addNumber = () => {
-        setContador(counter + 1)
-    }
+const ItemProduct = ({data}) => {
+    const {name, price, stock} = data
 
-    const delNumber = () => {
-        if(counter > 0) {
-         setContador(counter - 1)
-        }else(alert('error'))
-
-    }
     return (
         <div className="Item">
-            <span>{imagen}</span>
-            <p>{title}</p>
-            <span>{price}</span>
-            <span>{stock}</span>
-            <div>
-                <button onClick={delNumber}>-</button>
-                <p>{counter}</p>
-                <button onClick={addNumber}>+</button>
-            </div>
+            <p>{name}</p>
+            <span>${price}</span>
+            <span>{stock} unidades</span>
+            <ItemCount stock={data.stock}/>
             <button>Comprar</button>
         </div>
     )
