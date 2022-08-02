@@ -1,8 +1,9 @@
 import { propTypes } from "react-bootstrap/esm/Image";
 import ItemCount from "../ItemCount";
 import { useState } from "react";
+import ItemDetail from "../ItemDetail";
 const ItemProduct = ({data}) => {
-    const {name, price, stock} = data
+    const {name, price, stock, id} = data
 
     return (
         <div className="Item">
@@ -10,7 +11,7 @@ const ItemProduct = ({data}) => {
             <span>${price}</span>
             <span>{stock} unidades</span>
             <ItemCount stock={data.stock}/>
-            <button>Comprar</button>
+            <ItemDetail id={data.id} />
         </div>
     )
 }
