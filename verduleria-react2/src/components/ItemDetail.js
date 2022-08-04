@@ -1,4 +1,4 @@
-import { propTypes } from "react-bootstrap/esm/Image";
+
 import ItemCount from "../ItemCount";
 import { useState } from "react";
 import {Link} from 'react-router-dom'

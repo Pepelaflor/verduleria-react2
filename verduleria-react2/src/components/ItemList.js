@@ -10,10 +10,11 @@ function ItemList (item) {
 
     return (
         <div>
-        {data.map(item => {
+        {data.map((item, id) => {
+            console.log('primer parametro:', item, 'segundo parametro:', id)
             return (
             <div className="Item">
-                <ItemProduct data={item}/>
+                <ItemProduct key={item.id} data={item}/>
             </div>
             )
         })
