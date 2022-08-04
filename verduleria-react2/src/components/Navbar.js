@@ -13,7 +13,7 @@ export default function NavBar () {
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
         <Nav.Link href="#home">Nosotros</Nav.Link>
-        <Nav.Link href="#catalogo">Catalogo</Nav.Link>
+        <Nav.Link href="/">Catalogo</Nav.Link>
         <Nav.Link className='carrito' href="#carrito"><CartWidget/></Nav.Link>
       </Nav>
     </Navbar.Collapse>
