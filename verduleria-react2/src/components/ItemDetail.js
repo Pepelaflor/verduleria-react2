@@ -1,29 +1,19 @@
-import React, { useState, useEffect } from "react";
-import APICall from "./promises/Promise";
-import Popup from "./PopUp";
 
-function ItemDetail (item) {
-    const [isOpen, setIsOpen] = useState(false)
+import ItemCount from "../ItemCount";
+import { useState } from "react";
+import {Link} from 'react-router-dom'
+const ItemDetail = ({data}) => {
+    const {id, name, price, stock} = data
 
-    const togglePopup = () => {
-        setIsOpen(!isOpen);
-    }
     return (
-        <div>
-            <button onClick={togglePopup}>Mas informacion</button>
-            {isOpen && <Popup
-            content={<>
-                <b>{item.name}</b>
-                <p>{item.description}</p>
-                <p>Precio: ${item.price}</p>
-                <p>Stock: {item.stock} unidades</p>
-                <button>Añadir al carrito</button>
-         </>}
-         handleClose={togglePopup}
-         />}
+        <div className="Item-detail">
+            <p>{name}</p>
+            <span>${price}</span>
+            <span>{stock} unidades</span>
+            <ItemCount stock={data.stock}/>
+            <button>Comprar</button>
         </div>
     )
-
 }
 
 export default ItemDetail;

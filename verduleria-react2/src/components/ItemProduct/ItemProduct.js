@@ -1,18 +1,20 @@
 import { propTypes } from "react-bootstrap/esm/Image";
 import ItemCount from "../ItemCount";
 import { useState } from "react";
-import ItemDetail from "../ItemDetail";
+import {Link} from 'react-router-dom'
 const ItemProduct = ({data}) => {
-    const {name, price, stock, id} = data
+    const {id, name, price, stock} = data
 
     return (
+        <Link to={`/productos/${id}`}>
         <div className="Item">
             <p>{name}</p>
             <span>${price}</span>
             <span>{stock} unidades</span>
             <ItemCount stock={data.stock}/>
-            <ItemDetail id={data.id} />
+            <button>Comprar</button>
         </div>
+        </Link>
     )
 }
 
