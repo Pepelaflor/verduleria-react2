@@ -1,27 +1,18 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 import APICall from "./promises/Promise";
-import {useState,useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 
 const ItemDetailContainer = () => {
   const [productData, setProductData] = useState({})
   const { id } = useParams()
   
-  useEffect(() => {
-  filterById()
-}, [])
+ useEffect(() => {
+  APICall().then((res) => setProductData(filterById(res)));
+ }, []);
 
-const filterById = () => {
-  const [data, setData] = useState([]);
-    useEffect(() => {
-        APICall().then((res) => setData(res));
-    }, []);
-  data.some((product) => {
-    if(product.id == id) {
-      setProductData(product)
-    }
-  })
+const filterById = ( arrayResponse ) => {
+  return arrayResponse.find((p) => p.id == id)
 }
 return (
   <div className="container-item-detail">

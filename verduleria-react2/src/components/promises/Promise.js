@@ -7,6 +7,7 @@ function APICall () {
         const data = [
             {
                 id: 1,
+                img: <img src={require('../../multimedia/lechuga.jpg')}/>,
                 name: 'Lechuga',
                 description: 'Lechuga fresca y natural',
                 price: 30,
@@ -14,6 +15,7 @@ function APICall () {
             },
             {
                 id: 2,
+                img: 'banana.jpg',
                 name: 'Tomates',
                 description: 'Tomatitos ricos',
                 price: 80,

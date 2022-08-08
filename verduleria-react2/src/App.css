@@ -46,15 +46,9 @@
 .hometext {
   text-decoration: none;
 }
-.ItemDetail {
-  display: flex;
-  flex-direction: column;
+.Item-detail {
+  text-align: center;
   justify-content: center;
-  float: left;
-  width: 33,33%;
-  box-shadow: 1px, 1px, 5px, #afafaf47;
-  border: 10px;
-  margin: 30px;
 }
 
 .modal {
