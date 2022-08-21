@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react"
 import { CartContext } from "../context/CartContext"
 const ItemCount = ({stock, setQuantitySelected, productData, cartProducts}) => {
     const { addProductToCart } = useContext(CartContext)
-    const [counter, setContador] = useState(1)
+    const [counter, setContador] = useState(0)
 
         const addNumber = () => {
             if(counter < stock) {
@@ -11,7 +11,7 @@ const ItemCount = ({stock, setQuantitySelected, productData, cartProducts}) => {
         }
 
         const delNumber = () => {
-            if(counter > 1) {
+            if(counter > 0) {
             setContador(counter - 1);
             }else(alert('error'))
 
@@ -28,7 +28,9 @@ const ItemCount = ({stock, setQuantitySelected, productData, cartProducts}) => {
                     <button className="ItemCount" onClick={delNumber}>-</button>
                     <p className="ItemCount">{counter}</p>
                     <button className="ItemCount" onClick={addNumber}>+</button>
-                    <button onClick={onAdd}>Agregar al carrito</button>
+                    {
+                    counter > 0? <button onClick={onAdd}>Agregar al carrito</button> : ''
+                    }
                 </div>
             </div>
         )

@@ -7,7 +7,8 @@ const ItemProduct = ({data}) => {
 
     return (
         <div className="Item">
-            <p>{name}</p>
+            <h3>{name}</h3>
+            <p>{img}</p>
             <Link to={`/productos/${id}`}> <button>Comprar</button> </Link>
         </div>
 

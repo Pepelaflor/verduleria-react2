@@ -13,13 +13,17 @@
   }
 }
 
-.Items {
+.cart-widget {
   display: flex;
-  justify-content: center;
-  padding-top: 300px;
 }
 
-
+h2 {
+  text-align: center;
+}
+.Item-image {
+  max-width: 300px;
+  max-height: 300px;
+}
 .App-link {
   color: #61dafb;
 }
@@ -33,16 +37,22 @@
   }
 }
 
-.Item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  float: left;
-  width: 33,33%;
-  box-shadow: 1px, 1px, 5px, #afafaf47;
-  border: 10px;
-  margin: 30px;
+
+.Items {
+ display: flex;
+ justify-content: center;
+ 
 }
+
+.Items2 {
+  text-align: center;
+}
+.Item {
+  float: left;
+  width: 500px;
+  height: 500px;
+}
+
 .hometext {
   text-decoration: none;
 }
@@ -108,4 +118,7 @@
   font-size: 20px;
 }
 
+.Checkout-container {
+  text-align: center;
+}
 
