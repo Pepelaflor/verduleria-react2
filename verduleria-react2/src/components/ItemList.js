@@ -11,7 +11,7 @@ function ItemList (item) {
     }, []);
 
     return (
-        <div>
+    <div className="Items2">
         {data.map((item, id) => {
             return (
             <div className="Item">

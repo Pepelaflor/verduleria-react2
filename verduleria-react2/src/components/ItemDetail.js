@@ -9,7 +9,7 @@ const ItemDetail = ({data}) => {
     return (
         <div className="Item-detail">
             <p>{name}</p>
-            <img src={`/multimedia/${img}`} atl ="Imagen producto"/>
+            <p>{img}</p>
             <p>${price}</p>
             <span>{stock} unidades</span>
             <ItemCount stock={data.stock} setQuantitySelected={setQuantitySelected} productData={data}/>
