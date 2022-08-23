@@ -8,7 +8,7 @@ const ItemProduct = ({data}) => {
     return (
         <div className="Item">
             <h3>{name}</h3>
-            <p>{img}</p>
+            <img className="Item-image" src={img}></img>
             <Link to={`/productos/${id}`}> <button>Comprar</button> </Link>
         </div>
 
