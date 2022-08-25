@@ -7,13 +7,13 @@ import Cart from '../pages/Cart';
 
 
 const CartWidget = () => {
-    const {cartProducts} = useContext(CartContext)
-    const cartCount = cartProducts.length
+    const {totalItem} = useContext(CartContext)
+    
     
     return (
         <div className="cart-widget">
             <FontAwesomeIcon icon={faCartPlus} size="2x" />
-            <p>{cartCount}</p>
+            <p>{totalItem}</p>
         </div>
 
     );
