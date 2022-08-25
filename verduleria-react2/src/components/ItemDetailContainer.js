@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
-import APICall from "./promises/Promise";
 import {useParams} from 'react-router-dom'
 import db from "../firebaseConfig";
 import {doc, getDoc} from 'firebase/firestore'
