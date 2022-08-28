@@ -18,6 +18,7 @@ function ItemList (item) {
         const productList = productSnapshot.docs.map((doc) => {
             let product = doc.data()
             product.id = doc.id
+            product.categoryid = doc.categoryid
             return product
        
         })
@@ -32,7 +33,7 @@ function ItemList (item) {
         })
     })
     return (
-    <div className="Items2">
+    <div className="Items-Container">
         {listProducts.map((item, id) => {
             return (
             <div className="Item">
