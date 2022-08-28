@@ -6,9 +6,11 @@ const ItemProduct = ({data}) => {
     const {id, name, price, stock, img} = data
 
     return (
-        <div className="Item">
-            <h3>{name}</h3>
+        <div className="individualItem">
+            <h3 className="productTitle">{name}</h3>
+            <br></br>
             <img className="Item-image" src={img}></img>
+            <br></br>
             <Link to={`/productos/${id}`}> <button>Comprar</button> </Link>
         </div>
 

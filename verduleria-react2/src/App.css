@@ -12,19 +12,60 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+/* Estilo de productos */
+
+.Items {
+  display: flex;
+  justify-content: center;
+  
+ }
+
+ .Items2 {
+  text-align: center;
+}
+
+.Item-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px;
+  max-height: 300px;
+  padding-bottom: 10px;
+}
+
+.Item {
+  float: left;
+  width: 500px;
+  height: 500px;
+}
+
+.Item-detail {
+  text-align: center;
+  justify-content: center;
+}
+
+.individualItem {
+  text-align: center;
+}
+
+
+/* Fin estilo productos */
+
+/* Estilo de texto */
+
+h2, h3 {
+  text-align: center;
+}
+
+
+
+/* Fin estilo texto */
 
 .cart-widget {
   display: flex;
 }
 
-h2 {
-  text-align: center;
-}
-.Item-image {
-  display: block;
-  max-width: 300px;
-  max-height: 300px;
-}
+
 .App-link {
   color: #61dafb;
 }
@@ -38,29 +79,10 @@ h2 {
   }
 }
 
-
-.Items {
- display: flex;
- justify-content: center;
- 
-}
-
-.Items2 {
-  text-align: center;
-}
-.Item {
-  float: left;
-  width: 500px;
-  height: 500px;
-}
-
 .hometext {
   text-decoration: none;
 }
-.Item-detail {
-  text-align: center;
-  justify-content: center;
-}
+
 
 .modal {
   position: fixed;
