@@ -7,6 +7,10 @@
   pointer-events: none;
 }
 
+.cart-widget {
+  display: flex;
+  justify-content: flex-end;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -15,9 +19,7 @@
 /* Estilo de productos */
 
 .Items {
-  display: flex;
-  justify-content: center;
-  
+  margin: 100px;
  }
 
  .Items2 {
@@ -48,22 +50,113 @@
   text-align: center;
 }
 
+.buy-button {
+  background-color:#4CAF50;
+  color: white;
+  border: solid 1px black;
+  
+}
+
+
 
 /* Fin estilo productos */
 
-/* Estilo de texto */
+/* Estilo detalle producto */
 
+.Checkout-container {
+  text-align: center;
+}
+
+.Checkout-container2 {
+  position: relative;
+  display: block;
+  justify-content: center;
+}
+
+.Checkout-container3 {
+  text-align: center;
+}
+
+.p-detail {
+  display: inline;
+  padding: 20px;
+}
+
+.button-detail {
+  position: absolute;
+  right: 39%;
+  padding: 1px;
+  border-radius: 2%;
+  background-color: #f44336;
+  border: solid 1px;
+}
+
+.ItemCount {
+  display: inline;
+  margin: 10px
+
+}
+
+.count-del {
+  background-color: #f44336;
+  color: white;
+  border: solid 1px black;
+  border-radius: 8px;
+}
+
+.count-add {
+  background-color: #4CAF50;
+  color: white;
+  border: solid 1px black;
+  border-radius: 8px;
+}
+
+.cartAdd-button {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  background-color: #008CBA;
+  color: white;
+  border: solid 1px black;
+}
+
+/* Estilo de texto */
+h1 {
+  text-align: center;
+}
 h2, h3 {
   text-align: center;
+}
+
+.success-p {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.home-container {
+  text-align: center;
+}
+
+.homeheader {
+  padding-bottom: 20px;
 }
 
 
 
 /* Fin estilo texto */
+/* Estilo formulario */
 
-.cart-widget {
-  display: flex;
+form {
+  display: block;
+  margin: auto;
+  
 }
+.input-form {
+  display: inherit;
+  margin: inherit;
+}
+/* Fin estilo formulario */
+
 
 
 .App-link {
@@ -96,11 +189,7 @@ h2, h3 {
   box-shadow: 1px, 5px, 5p,x #00000047;
 }
 
-.ItemCount {
-  display: inline;
-  margin: 5px;
 
-}
 
 .popup-box {
   position: fixed;
@@ -123,6 +212,7 @@ h2, h3 {
   padding: 20px;
   border: 1px solid #999;
   overflow: auto;
+  
 }
  
 .close-icon {
@@ -141,7 +231,4 @@ h2, h3 {
   font-size: 20px;
 }
 
-.Checkout-container {
-  text-align: center;
-}
 

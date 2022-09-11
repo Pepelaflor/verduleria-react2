@@ -8,7 +8,8 @@ import Products from './pages/Products';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import CartProvider from './context/CartContext';
 import Cart from './pages/Cart';
-
+import Category from './pages/Category';
+import Success from './pages/Success';
 
 
 function App() {
@@ -20,9 +21,11 @@ function App() {
         </header>
         <Routes>
           <Route path='/' element={<Home/>}/>
+          <Route path='/productos/category/:category' element={<Products/>}/>
           <Route path='/productos' element={<Products/>}/>
           <Route path='/productos/:id' element={<ItemDetailContainer/>}/>
           <Route path='/cart' element={<Cart/>}/>
+          <Route path='/Success' element={<Success/>}/>
         </Routes>
       </BrowserRouter>
     </CartProvider>

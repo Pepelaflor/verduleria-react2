@@ -2,14 +2,33 @@ import { createContext, useState } from "react";
 
 const CartContext = createContext()
 
-const CartProvider = ({children}) => {
+const CartProvider = ({ children }) => {
     const [cartProducts, setCartProducts] = useState([])
     const [totalItem, setTotalItem] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0)
 
     console.log('cartProducts', cartProducts)
+
     const addProductToCart = (product) => {
-        setCartProducts(cartProducts => [...cartProducts, product])
+        const isInCart = cartProducts.find(
+            (productInCart) => productInCart.id == product.id
+        );
+        if (isInCart) {
+            const newArray = cartProducts.map((productInCart) => {
+                if (productInCart.id == product.id) {
+                    return {
+                        ...productInCart,
+                        counter: productInCart.counter + product.counter,
+                    };
+                } else {
+                    return productInCart;
+                }
+            });
+            setCartProducts(newArray);
+        }
+        else{
+            setCartProducts(cartProducts => [...cartProducts, product])
+        }
         setTotalItem(totalItem + product.counter);
         setTotalPrice(totalPrice + (product.price * product.counter));
     }
@@ -29,7 +48,7 @@ const CartProvider = ({children}) => {
         totalPrice
     }
 
-    
+
     return (
         <CartContext.Provider value={data}>
             {children}
