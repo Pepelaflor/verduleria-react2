@@ -3,7 +3,7 @@ import ItemCount from "../ItemCount";
 import { useState } from "react";
 import {Link} from 'react-router-dom'
 const ItemProduct = ({data}) => {
-    const {id, name, price, stock, img} = data
+    const {id, name, description, price, stock, img, category} = data
 
     return (
         <div className="individualItem">
@@ -11,7 +11,8 @@ const ItemProduct = ({data}) => {
             <br></br>
             <img className="Item-image" src={img}></img>
             <br></br>
-            <Link to={`/productos/${id}`}> <button>Comprar</button> </Link>
+            <p>{description}</p>
+            <Link to={`/productos/${id}`}> <button className="buy-button">Comprar</button> </Link>
         </div>
 
     )

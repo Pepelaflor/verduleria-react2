@@ -7,8 +7,7 @@ const ItemCount = ({stock, setQuantitySelected, productData, cartProducts}) => {
         const addNumber = () => {
             if(counter < stock) {
                 setContador(counter + 1);
-            }
-        }
+            }else(alert('Ya no hay mas stock!'))}
 
         const delNumber = () => {
             if(counter > 0) {
@@ -25,11 +24,11 @@ const ItemCount = ({stock, setQuantitySelected, productData, cartProducts}) => {
         return (
             <div className="CounterContainer">
                 <div>
-                    <button className="ItemCount" onClick={delNumber}>-</button>
+                    <button className="count-del" onClick={delNumber}>-</button>
                     <p className="ItemCount">{counter}</p>
-                    <button className="ItemCount" onClick={addNumber}>+</button>
+                    <button className="count-add" onClick={addNumber}>+</button>
                     {
-                    counter > 0? <button onClick={onAdd}>Agregar al carrito</button> : ''
+                    counter > 0? <button className="cartAdd-button" onClick={onAdd}>Agregar al carrito</button> : ''
                     }
                 </div>
             </div>
